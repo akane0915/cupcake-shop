@@ -1,0 +1,18 @@
+h1{
+  color: orange;
+  font-size: 100px;
+}
+
+.flashy{
+  color: red;
+  font-style: italic;
+}
+
+h2.flashy{
+  font-weight: bold;
+}
+
+.best{
+  font-family: cursive;
+  font-size: 120%;
+}
