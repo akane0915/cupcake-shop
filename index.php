@@ -1,5 +1,5 @@
 <?php
-    $name = $_GET["recipient"];
+    $name = $_GET["bakery_owner"];
 ?>
 
 <!DOCTYPE>
