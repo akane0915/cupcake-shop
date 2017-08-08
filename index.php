@@ -1,5 +1,5 @@
 <?php
-    $name = "Beth";
+    $name = $_GET["recipient"];
 ?>
 
 <!DOCTYPE>
