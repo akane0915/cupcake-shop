@@ -5,6 +5,28 @@
 
     $number = $_GET["number"];
     $double_the_number = 2 * $number;
+
+    $repeated_text = str_repeat($full_name, $number);
+
+    $show_ping_pong = pingPong($number);
+
+    function pingPong($number) {
+      $ping_pong = array();
+      $i = 1;
+      while ($i <= $number) {
+        if ($i % 15 == 0) {
+          array_push($ping_pong, "ping-pong");
+        } elseif ($i % 5 == 0) {
+          array_push($ping_pong, "pong");
+        } elseif ($i % 3 == 0) {
+          array_push($ping_pong, "ping");
+        } else {
+          array_push($ping_pong, $i);
+        }
+        $i++;
+      }
+      return $ping_pong;
+    }
 ?>
 
 <!DOCTYPE>
@@ -21,7 +43,21 @@
         <p>Red Velvet Cupcake</p>
         <p>Vanilla Buttercream Cupcake</p>
         <p class="best">Carrot Cupcake</p>
+
         <p>Price: <?php echo $double_the_number; ?></p>
+
+        <p>Repeated name: <?php echo $repeated_text; ?></p>
+
+        <p>Ping pong:
+          <ul>
+          <?php
+              foreach ($show_ping_pong as $value) {
+                echo "<li>" . $value . "</li>";
+              }
+          ?>
+        </ul>
+        </p>
+
         <a class="flashy" href="http://cookdiary.net/carrot-cake-cupcakes/">Order Here</a>
     </body>
 </html>
